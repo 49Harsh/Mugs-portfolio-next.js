@@ -1,5 +1,5 @@
 import Header from '@/app/components/Header'
-import HeroPage from '@/app/components/HeroPage'
+import HeroPage from './components/HeroPage'
 import AboutMe from '@/app/components/AboutMe'
 import Service from '@/app/components/Service'
 import MyProject from '@/app/components/MyProject'

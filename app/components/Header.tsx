@@ -29,14 +29,14 @@ const Header = () => {
   }
 
   return (
-    <header className="bg-white dark:bg-gray-800 shadow-md">
+    <header className="bg-white dark:bg-[#1E1E1E] shadow-md">
       <div className="container mx-auto px-8 py-2 flex justify-between items-center">
         <div className="flex items-center">
-          <Image src={Logo} alt="Mumair Logo" width={56} height={56} className="mr-2" />
+          <Image src={Logo} alt="Mumair Logo" width={48} height={48} className="mr-2" />
           <h1 className="text-2xl font-bold text-black dark:text-white">Mumair</h1>
         </div>
         <nav className="hidden md:flex space-x-6">
-          <Link href="/" className="text-black dark:text-white hover:text-orange-500">Home</Link>
+          <Link href="/hero" className="text-black dark:text-white hover:text-orange-500">Home</Link>
           <Link href="/about" className="text-black dark:text-white hover:text-orange-500">About Me</Link>
           <Link href="/services" className="text-black dark:text-white hover:text-orange-500">Services</Link>
           <Link href="/projects" className="text-black dark:text-white hover:text-orange-500">Projects</Link>
@@ -56,7 +56,7 @@ const Header = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-800 px-4 py-2">
+        <div className="md:hidden bg-white dark:bg-gray-800 flex flex-col justify-center items-center px-4 py-2">
           <Link href="/" className="block py-2 text-black dark:text-white hover:text-orange-500">Home</Link>
           <Link href="/about" className="block py-2 text-black dark:text-white hover:text-orange-500">About Me</Link>
           <Link href="/services" className="block py-2 text-black dark:text-white hover:text-orange-500">Services</Link>
