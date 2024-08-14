@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black">
       <Header />
-      <main>
+      <main className='bg-white dark:bg-[#1E1E1E]'>
         <HeroPage />
         <AboutMe />
         <Service />
