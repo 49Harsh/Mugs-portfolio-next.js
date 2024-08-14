@@ -47,7 +47,7 @@ const Header = () => {
           <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
             {theme === 'dark' ? <FaSun className="h-6 w-6 text-white" /> : <FaMoon className="h-6 w-6 text-black" />}
           </button>
-          <a href="/cv.pdf" download className="hidden md:inline-block bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition-colors">
+          <a href="https://drive.google.com/file/d/1cQ2SQ-ii1GXYIR55PrqNf0yHh1jPwqPU/view?usp=sharing" target='_blank' download className="hidden md:inline-block bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600 transition-colors">
             Download CV
           </a>
           <button onClick={toggleMenu} className="md:hidden p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
@@ -63,7 +63,7 @@ const Header = () => {
           <Link href="/projects" className="block py-2 text-black dark:text-white hover:text-orange-500">Projects</Link>
           <Link href="/testimonials" className="block py-2 text-black dark:text-white hover:text-orange-500">Testimonials</Link>
           <Link href="/contact" className="block py-2 text-black dark:text-white hover:text-orange-500">Contact</Link>
-          <a href="/cv.pdf" download className="block py-2 text-orange-500 hover:text-orange-600">Download CV</a>
+          <a href="https://drive.google.com/file/d/1cQ2SQ-ii1GXYIR55PrqNf0yHh1jPwqPU/view?usp=sharing" target='_blank' download className="block py-2 text-orange-500 hover:text-orange-600">Download CV</a>
         </div>
       )}
     </header>

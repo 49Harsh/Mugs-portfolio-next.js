@@ -1,43 +1,85 @@
+'use client'
+import { useState } from 'react'
 import Image from 'next/image'
+import testImg from '@/public/images/Ellipse 10.png' 
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'John Doe',
-      role: 'CEO, Tech Company',
-      content: 'Working with this developer was a great experience. They delivered high-quality work on time and were always responsive to our needs.',
-    //   avatar: '/images/avatar1.jpg',
+      name: 'Name',
+      role: 'CEO',
+      content: 'Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.',
+
     },
     {
-      name: 'Jane Smith',
-      role: 'Marketing Director',
-      content: 'The website they built for us exceeded our expectations. It s beautiful, fast, and has helped increase our online conversions.'
-    //   avatar: '/images/avatar1.jpg',
+      name: 'Name',
+      role: 'CEO',
+      content: 'Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.',
+
     },
     {
-      name: 'Mike Johnson',
-      role: 'Startup Founder',
-      content: 'I highly recommend this developer. They have a great eye for design and strong technical skills. They were crucial in launching our MVP.',
-    //   avatar: '/images/avatar3.jpg',
+      name: 'Name',
+      role: 'CEO',
+      content: 'Lorem ipsum dolor sit amet consectetur. In enim cursus odio accumsan. Id leo urna velit neque mattis id tellus arcu condimentum. Augue dictum dolor elementum convallis dignissim malesuada commodo ultrices.',
+
     },
+    // Add more testimonials as needed
   ]
 
+  const [currentTestimonial, setCurrentTestimonial] = useState(1)
+
   return (
-    <section className="bg-gray-100 dark:bg-gray-800 py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Testimonials</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-md">
-              <p className="mb-4 italic">"{testimonial.content}"</p>
-              <div className="flex items-center">
-                {/* <Image src={testimonial.avatar} alt={testimonial.name} width={48} height={48} className="rounded-full mr-4" /> */}
-                <div>
-                  <h4 className="font-semibold">{testimonial.name}</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">{testimonial.role}</p>
+    <section className="py-20 w-full bg-white dark:bg-[#1E1E1E] ">
+      <div className="w-full ">
+        <h2 className="text-4xl text-black dark:text-white font-bold mb-4 text-center">Testimonials</h2>
+        <p className="text-center text-gray-600  dark:text-white mb-12 max-w-2xl mx-auto">
+          Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus
+          netus in. Aliquet donec morbi convallis pretium
+        </p>
+
+        <div className="flex items-center w-full justify-center">
+          {[-1, 0, 1].map((offset) => {
+            const index = (currentTestimonial + offset + testimonials.length) % testimonials.length
+            const testimonial = testimonials[index]
+            return (
+              <div 
+                key={index} 
+                className={`w-full md:w-1/3 p-6 ${
+                  offset === 0 ? 'opacity-100 scale-100' : 'opacity-50 scale-95'
+                } transition-all duration-300`}
+              >
+                <div className="bg-gray-100 rounded-lg p-8 w">
+                  <div className="flex items-start">
+                    <div className="w-16 h-16 mr-4 flex-shrink-0">
+                      <Image
+                        src={testImg}
+                        alt={testimonial.name}
+                        width={84}
+                        height={84}
+                        className="rounded-full"
+                      />
+                    </div>
+                    <div>
+                      <p className="mb-4 text-gray-700 text-sm">"{testimonial.content}"</p>
+                      <h4 className="font-semibold">{testimonial.name}</h4>
+                      <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            )
+          })}
+        </div>
+
+        <div className="flex justify-center mt-8">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              className={`w-2 h-2 rounded-full mx-1 ${
+                index === currentTestimonial ? 'bg-orange-500' : 'bg-gray-300'
+              }`}
+              onClick={() => setCurrentTestimonial(index)}
+            />
           ))}
         </div>
       </div>
