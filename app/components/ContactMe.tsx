@@ -13,7 +13,7 @@ const ContactMe = () => {
   }
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-white dark:bg-[#1E1E1E] lg:px-16 max-w-7xl mx-auto">
+    <section id='contactme' className="py-20 px-4 md:px-8 bg-white dark:bg-[#1E1E1E] lg:px-16 max-w-7xl mx-auto">
       <h1 className="text-3xl text-black dark:text-white md:text-4xl lg:text-5xl font-bold text-center mb-4">
         Lets Design Together
       </h1>

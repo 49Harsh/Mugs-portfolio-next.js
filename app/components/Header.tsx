@@ -36,12 +36,12 @@ const Header = () => {
           <h1 className="lg:text-2xl text-sm font-bold text-black  dark:text-white">Mumair</h1>
         </div>
         <nav className="hidden lg:flex space-x-6">
-          <Link href="hero" className="text-black dark:text-white hover:text-orange-500">Home</Link>
-          <Link href="about" className="text-black dark:text-white hover:text-orange-500">About Me</Link>
-          <Link href="services" className="text-black dark:text-white hover:text-orange-500">Services</Link>
-          <Link href="projects" className="text-black dark:text-white hover:text-orange-500">Projects</Link>
-          <Link href="testimonials" className="text-black dark:text-white hover:text-orange-500">Testimonials</Link>
-          <Link href="contact" className="text-black dark:text-white hover:text-orange-500">Contact</Link>
+          <Link href="#hero" className="text-black dark:text-white hover:text-orange-500">Home</Link>
+          <Link href="#about" className="text-black dark:text-white hover:text-orange-500">About Me</Link>
+          <Link href="#services" className="text-black dark:text-white hover:text-orange-500">Services</Link>
+          <Link href="#projects" className="text-black dark:text-white hover:text-orange-500">Projects</Link>
+          <Link href="#testimonials" className="text-black dark:text-white hover:text-orange-500">Testimonials</Link>
+          <Link href="#contactme" className="text-black dark:text-white hover:text-orange-500">Contact</Link>
         </nav>
         <div className="flex items-center space-x-4">
           <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">

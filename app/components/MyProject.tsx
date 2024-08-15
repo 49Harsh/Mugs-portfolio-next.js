@@ -10,7 +10,7 @@ const MyProject = () => {
   const categories = ['All', 'UI/UX', 'Web Design', 'App Design', 'Graphic Design']
   
   return (
-    <section className="py-16 container px-4 max-w-6xl mx-auto bg-white dark:bg-[#1E1E1E]">
+    <section id='projects' className="py-16 container px-4 max-w-6xl mx-auto bg-white dark:bg-[#1E1E1E]">
       <h1 className="text-4xl text-black dark:text-white font-bold text-center mb-4">My Projects</h1>
       <p className="text-center text-gray-600 dark:text-white mb-8">
         Lorem ipsum dolor sit amet consectetur. Mollis erat duis aliquam mauris est risus

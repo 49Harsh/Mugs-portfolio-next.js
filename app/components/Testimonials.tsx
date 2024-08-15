@@ -36,7 +36,7 @@ const Testimonials = () => {
   }, [])
 
   return (
-    <section className="py-20 w-full bg-white dark:bg-[#1E1E1E]">
+    <section id='testimonials' className="py-20 w-full bg-white dark:bg-[#1E1E1E]">
       <div className="w-full px-4">
         <h2 className="text-4xl text-black dark:text-white font-bold mb-4 text-center">Testimonials</h2>
         <p className="text-center text-gray-600 dark:text-white mb-12 max-w-2xl mx-auto">
