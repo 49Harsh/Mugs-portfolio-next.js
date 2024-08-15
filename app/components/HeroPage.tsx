@@ -6,7 +6,7 @@ import peoples from '@/public/images/main011.png'
 
 const HeroPage = () => {
   return (
-    <section className="bg-white dark:bg-[#1E1E1E] p-4 md:p-8 lg:p-12 min-h-screen flex flex-col items-center">
+    <section id='hero' className="bg-white dark:bg-[#1E1E1E] p-4 md:p-8 lg:p-12 min-h-screen flex flex-col items-center">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <div className="md:w-1/2 mb-8 md:mb-0 mx-10">
           <h2 className="text-black dark:text-white font-semibold mb-2">Hi I am</h2>

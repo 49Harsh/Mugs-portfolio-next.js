@@ -11,7 +11,7 @@ const AboutMe = () => {
   ];
 
   return (
-    <section id="about" className="bg-white dark:bg-[#1E1E1E] text-white py-20">
+    <section id="/about" className="bg-white dark:bg-[#1E1E1E] text-white py-20">
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center lg:px-36">
           <div className="md:w-1/2 flex justify-center items-center mx-auto">
