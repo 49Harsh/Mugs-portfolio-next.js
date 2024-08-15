@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             </Link>
           </div>
           <nav className="mb-4 md:mb-0">
-            <ul className="flex flex-wrap justify-center space-x-4 text-sm text-gray-600">
+            <ul className="flex flex-wrap justify-center space-x-4 text-sm text-gray-600  dark:text-white">
               <li><Link href="/">Home</Link></li>
               <li><Link href="/about">About Me</Link></li>
               <li><Link href="/services">Services</Link></li>

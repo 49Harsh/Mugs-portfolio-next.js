@@ -20,7 +20,7 @@ const HeroPage = () => {
           </button>
         </div>
         
-        <div className="md:w-1/2 flex justify-center items-center">
+        <div className="md:w-1/2 flex flex-col justify-center items-center ">
           <div className="w-72 h-72 md:w-96 md:h-96 lg:w-[550px] lg:h-[550px] flex justify-center items-center rounded-full overflow-hidden">
             <Image
               src={peoples}
@@ -30,15 +30,16 @@ const HeroPage = () => {
               objectFit="cover"
             />
           </div>
-        </div>
-      </div>
-      
-      <div className="flex flex-row lg:w-[57%] justify-center lg:justify-end space-x-4">
+          <div className="flex flex-row  justify-center items-center  space-x-4">
         <FaFacebook className="text-black dark:text-white hover:text-blue-700 cursor-pointer" />
         <FaTwitter className="text-black dark:text-white hover:text-blue-500 cursor-pointer" />
         <FaInstagram className="text-black dark:text-white hover:text-orange-500 cursor-pointer" />
         <FaLinkedin className="text-black dark:text-white hover:text-blue-500 cursor-pointer" />
       </div>
+        </div>
+      </div>
+      
+      
     </section>
   )
 }
