@@ -1,79 +1,42 @@
 'use client'
+
 import { useState } from 'react'
 
 const ContactMe = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  })
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }))
-  }
+  const [email, setEmail] = useState('')
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // Here you would typically send the form data to your server or a third-party service
-    console.log('Form submitted:', formData)
-    // Reset form after submission
-    setFormData({ name: '', email: '', message: '' })
-    // You could also add some user feedback here, like a success message
+    console.log('Form submitted:', email)
+    // Here you would typically send the email to your server or a third-party service
+    setEmail('')
   }
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold mb-8 text-center">Contact Me</h2>
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto">
-          <div className="mb-4">
-            <label htmlFor="name" className="block mb-2">Name</label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block mb-2">Email</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="message" className="block mb-2">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              rows={4}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            ></textarea>
-          </div>
-          <button
-            type="submit"
-            className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition duration-300"
-          >
-            Send Message
-          </button>
-        </form>
-      </div>
+    <section className="py-20 px-4 md:px-8 bg-white dark:bg-[#1E1E1E] lg:px-16 max-w-7xl mx-auto">
+      <h1 className="text-3xl text-black dark:text-white md:text-4xl lg:text-5xl font-bold text-center mb-4">
+        Lets Design Together
+      </h1>
+      <p className="text-center text-gray-600 dark:text-white mb-8 max-w-2xl mx-auto">
+        Lorem ipsum dolor sit amet consectetur. Tristique amet sed massa nibh lectus
+        netus in. Aliquet donec morbi convallis pretium
+      </p>
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter Your Email"
+          required
+          className="flex-grow px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-orange-500"
+        />
+        <button
+          type="submit"
+          className="bg-orange-500 text-white px-6 py-3 rounded-md hover:bg-orange-600 transition duration-300"
+        >
+          Contact Me
+        </button>
+      </form>
     </section>
   )
 }
